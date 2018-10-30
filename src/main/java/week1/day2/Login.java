@@ -1,12 +1,13 @@
 package week1.day2;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class Login {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		//set path
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		//launch the browser 
@@ -20,6 +21,9 @@ public class Login {
 		//enter password
 		WebElement elePassword = driver.findElementById("password");
 		elePassword.sendKeys("crmsfa");
+		
+		/*elePassword.sendKeys("600113", Keys.TAB);*/
+
 		//click login
 		driver.findElementByClassName("decorativeSubmit").click();
 
@@ -29,6 +33,7 @@ public class Login {
 		WebElement source = driver.findElementById("createLeadForm_dataSourceId");
 		// Pass the webelement in the Select constructor
 		Select sel = new Select(source);
+		Thread.sleep(3000);
 		// 3 ways to select the drop down
 		// sel.selectByVisibleText("Other");
 		//sel.selectByIndex(4);
