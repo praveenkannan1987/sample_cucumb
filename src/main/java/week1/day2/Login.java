@@ -25,13 +25,28 @@ public class Login {
 
 		driver.findElementByLinkText("CRM/SFA").click();
 		driver.findElementByLinkText("Create Lead").click();
+		// Identify the webElement
 		WebElement source = driver.findElementById("createLeadForm_dataSourceId");
-        Select sel = new Select(source);
-       // sel.selectByVisibleText("Other");
-        //sel.selectByIndex(4);
-        sel.selectByValue("LEAD_WORDOFMOUTH");
-       
-        
+		// Pass the webelement in the Select constructor
+		Select sel = new Select(source);
+		// 3 ways to select the drop down
+		// sel.selectByVisibleText("Other");
+		//sel.selectByIndex(4);
+		sel.selectByValue("LEAD_WORDOFMOUTH");
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
 
 	}
 
