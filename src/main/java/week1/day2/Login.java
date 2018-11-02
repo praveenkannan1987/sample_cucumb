@@ -1,6 +1,5 @@
 package week1.day2;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -13,16 +12,17 @@ public class Login {
 		//launch the browser 
 		ChromeDriver driver = new ChromeDriver();
 		//load url
+		
 		driver.get("http://leaftaps.com/opentaps/");
 		//maximize the browser
 		driver.manage().window().maximize();
 		//enter username
 		driver.findElementById("username").sendKeys("DemoSalesManager");
-		//enter password
+		/*//enter password
 		WebElement elePassword = driver.findElementById("password");
 		elePassword.sendKeys("crmsfa");
 		
-		/*elePassword.sendKeys("600113", Keys.TAB);*/
+		elePassword.sendKeys("600113", Keys.TAB);
 
 		//click login
 		driver.findElementByClassName("decorativeSubmit").click();
@@ -39,9 +39,12 @@ public class Login {
 		//sel.selectByIndex(4);
 		sel.selectByValue("LEAD_WORDOFMOUTH");
 
+		String text = driver.findElementById("viewLead_companyName_sp").getText();
+		if (text.contains("TL")) {
+			System.out.println("text matches");
+		}
 		
-		
-		
+		*/
 		
 		
 		
