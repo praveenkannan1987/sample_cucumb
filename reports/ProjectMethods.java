@@ -32,25 +32,6 @@ public class ProjectMethods extends SeMethod {
 		closeBrowser();
 	}
 
-	@BeforeClass
-	public void beforeClass() {
-	}
-
-	@AfterClass
-	public void afterClass() {
-		System.out.println("afterClass");
-	}
-
-	@BeforeTest
-	public void beforeTest() {
-		System.out.println("beforeTest");
-	}
-
-	@AfterTest
-	public void afterTest() {
-		System.out.println("afterTest");
-	}
-
 	@BeforeSuite
 	public void beforeSuite() {
 		startResult();
