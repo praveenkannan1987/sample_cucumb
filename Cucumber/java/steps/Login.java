@@ -58,6 +58,7 @@ public class Login {
 		} else {
 			System.out.println("fail");
 		}
+		driver.close();
 	}
 
 	/*@Then("Verify the Welcome message as B2B")

@@ -1,21 +1,15 @@
-Feature: Login into LeafTaps 
-
-Background: 
-	Given Launch the browser 
-	And Load the URL 
-	And Maximize the browser 
-	And Set the timeout 
+Feature: Login into LeafTaps
 	
 Scenario Outline: Login positive 
 	And Enter username as <username>
 	And Enter password as <pass> 
 	When Click on Loginbutton 
-	Then Verify the Welcome message of <verificationName>
+	Then Click Logout
 	
 	Examples: 
-		|username|pass|verificationName|
-		|DemoSalesManager|crmsfa|Sales|
-		|DemoCSR|crmsfa|B2B|
+		|username|pass|
+		|DemoSalesManager|crmsfa|
+		|DemoCSR|crmsfa|
 		
 		#Scenario: Login negative
 		#And Enter username as DemoCSR

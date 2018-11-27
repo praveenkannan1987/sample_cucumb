@@ -9,16 +9,13 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)  
 @CucumberOptions(
 		features= {
-		"src/test/java/feature/Login.feature"},
-		glue= {"pages","runHooks"},
+		"src/test/java/feature/CL.feature"},
+		glue="steps",
 		dryRun=false,
 		snippets=SnippetType.CAMELCASE,
-		monochrome=true,
-		plugin= {"pretty","html:CucumberReports"}
-//		name="Login"
-//		strict=true,
-	/*	tags= {"@smoke"}*/)
-public class RunTest {
+		monochrome=true)
+
+public class RunTest2 {
 
 }
 
